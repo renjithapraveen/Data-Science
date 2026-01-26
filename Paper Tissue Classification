@@ -1,0 +1,25 @@
+Given K = 3
+Query instance: (X1, X2) = (3, 7)
+Training samples
+X1	X2	Category
+7	7	Hard
+7	4	Hard
+3	4	Soft
+1	4	Soft
+Step 2: Squared Distance Calculation
+Distance formula:(𝑋1−3)2+(𝑋2−7)2(X1−3)2+(X2−7)2
+Point	Squared Distance
+(7,7)	16
+(7,4)	25
+(3,4)	9
+(1,4)	13
+step 3: Nearest 3 neighbours (minimum distances)
+(3,4) → Soft → Distance = 9
+(1,4) → Soft → Distance = 13
+(7,7) → Hard → Distance = 16
+Step 4: Majority Voting
+Soft = 2
+Hard = 1
+Final Answer (Step 5)
+Y = Soft
+So the new tissue with X1 = 3 and X2 = 7 is classified as Soft
