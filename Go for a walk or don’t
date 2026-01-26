@@ -1,0 +1,144 @@
+Go For a Walk or Not? -
+
+What do you think about when you decide to go for a walk?
+Is it hot or cold outside?
+Is it raining?
+How windy is it?
+
+Now, these are just a few factors that may influence your desire to go for a walk. There can be many others, but for now we shall keep to these three. The table below shows all the combinations for each factor and whether the person ultimately went for a walk.
+
+Temperature Raining Windy Walk?
+Hot         No      No    Yes
+Hot         Yes     No    No
+Hot         No      Yes   Yes
+Hot         Yes     Yes   No
+Cold        No      No    Yes
+Cold        Yes     No    Yes
+Cold        No      Yes   No
+Cold        Yes     Yes   No
+
+
+Create a Decision Tree to predict whether a person will choose to go for a walk or not.
+
+Answer: Let’s build a Decision Tree step-by-step using the given data.
+
+Step 1: Given Features
+
+Temperature: Hot / Cold
+
+Raining: Yes / No
+
+Windy: Yes / No
+
+Target (Output): Walk? (Yes / No)
+
+Step 2: Best Root Node
+
+We check which feature best separates Yes and No.
+
+From the table:
+
+Raining = No
+
+Walk = Yes (3 times), No (1 time) → Mostly Yes
+
+Raining = Yes
+
+Walk = Yes (1 time), No (3 times) → Mostly No
+
+So Raining is the best root node.
+
+Step 3: Build the Decision Tree
+            Raining?
+            /       \
+         No           Yes
+         |             |
+       Windy?        Temperature?
+      /      \        /          \
+   No        Yes    Hot          Cold
+   |           |      |             |
+ Walk=Yes   Temperature?        Windy?
+             /        \         /     \
+           Hot        Cold     No       Yes
+            |           |       |         |
+        Walk=Yes     Walk=No  Walk=Yes   Walk=No
+
+Simplified Decision Rules
+If Raining = No
+
+If Windy = No → Walk = Yes
+
+If Windy = Yes
+
+Hot → Yes
+
+Cold → No
+
+🌧 If Raining = Yes
+
+Hot → Walk = No
+
+Cold:
+
+Windy = No → Yes
+
+Windy = Yes → No
+
+Final Answer Summary
+
+Root Node: Raining
+Then split by Windy and Temperature.
+Option 2 answer:
+This is a Decision Tree classification problem based on three features:
+
+Temperature (Hot / Cold)
+
+Raining (Yes / No)
+
+Windy (Yes / No)
+Target: Walk? (Yes / No)
+
+Let’s build a simple and correct decision tree from the data 
+
+Given Data
+Temperature	Raining	Windy	Walk
+Hot     	No      No	    Yes
+Hot	        Yes	    No	    No
+Hot	        No	    Yes	    Yes
+Hot	        Yes	    Yes	    No
+Cold	    No	    No	    Yes
+Cold	    Yes	    No	    Yes
+Cold	    No	    Yes     No
+Cold	    Yes	    Yes	    No
+Decision Tree (Logical Structure)
+                Raining?
+               /        \
+            Yes          No
+           /              \
+      Temperature?       Windy?
+        /      \          /     \
+     Hot      Cold     Yes       No
+     |         |        |         |
+    No        No       No        Yes
+
+Rules (Human-readable form)
+Rule 1:
+If Raining = Yes
+Walk = No (for both Hot and Cold)
+Rule 2:
+If Raining = No and Windy = No
+Walk = Yes
+Rule 3:
+If Raining = No and Windy = Yes
+Walk = No
+Final Prediction Logic
+Main deciding factors in order:
+Raining (most important)
+Windy
+Temperature (least important here)
+Final Decision Tree Answer:
+IF Raining = Yes → Walk = No
+ELSE
+    IF Windy = Yes → Walk = No
+    ELSE → Walk = Yes
+
