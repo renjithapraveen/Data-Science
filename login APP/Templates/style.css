@@ -1,0 +1,158 @@
+/* ================================
+   LOGIN & REGISTRATION PAGE CSS
+   ================================ */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+
+/* Main outer container */
+.border {
+    width: 425px;
+    min-height: 440px;
+    margin: 20px auto;
+    padding: 10px 15px 20px 15px;
+    background-color: #9bc4d2;
+    box-sizing: border-box;
+}
+
+
+/* Header */
+.header {
+    width: 100%;
+    height: 75px;
+    background-color: #236b8e;
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Login / Register heading */
+.word {
+    color: white;
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+/* Header heading */
+.header .word {
+    font-size: 32px;
+    margin: 0;
+}
+
+
+/* Form */
+form {
+    margin: 0;
+}
+
+
+/* Input boxes */
+.textbox {
+    width: 270px;
+    height: 40px;
+
+    background-color: #236b8e;
+
+    border: 2px solid #333;
+    border-radius: 10px;
+
+    box-sizing: border-box;
+
+    color: white;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+
+    text-align: center;
+
+    outline: none;
+}
+
+
+/* Placeholder text */
+.textbox::placeholder {
+    color: white;
+    opacity: 1;
+    text-align: center;
+}
+
+
+/* Input focus */
+.textbox:focus {
+    outline: none;
+    border-color: #222;
+}
+
+
+/* Button */
+.btn {
+    display: inline-block;
+
+    background-color: #236b8e;
+    color: white;
+
+    border: 2px solid #333;
+    border-radius: 10px;
+
+    padding: 10px 28px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+
+/* Button hover */
+.btn:hover {
+    background-color: #1d5d7b;
+}
+
+
+/* Bottom text */
+.bottom {
+    color: #236b8e;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+/* Bottom link */
+a.bottom {
+    color: #236b8e;
+    text-decoration: underline;
+}
+
+
+/* Link hover */
+a.bottom:hover {
+    color: #174e67;
+}
+
+
+/* Message */
+.msg {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
